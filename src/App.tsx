@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Text } from './Polimorphic'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    return (
+        <div className='App'>
+            <Text>This is a default span</Text>
+            <Text as='h1' color='red'>
+                This is a red h1
+            </Text>
+            <Text as='h3' color='blue'>
+                This is a blue h3
+            </Text>
+            <Text as='button' color='green'>
+                This is a green button
+            </Text>
+            <Text as='img'>This is a div</Text>
+        </div>
+    )
 }
-
-export default App;
